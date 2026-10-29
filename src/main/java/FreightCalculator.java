@@ -1,20 +1,12 @@
 public class FreightCalculator {
 
-    public static double calculateShippingFee(double distanceKm, double weightKg) {
-
-        double freight = 10 + (1.5 * distanceKm);
-
-        if (weightKg > 10) {
-            freight += 2 * (weightKg - 10);
-        }
-        return freight;
-    }
-
     public static void main(String[] args) {
 
-        double distanceKm = 10;
-        double weightKg = 15;
+        Carrier carrier1 = new Carrier("Express Logistics", 12, 2);
 
-        System.out.println(calculateShippingFee(distanceKm, weightKg));
+        ShippingQuote quote1 = new ShippingQuote(15, 12, carrier1);
+
+        System.out.println("Carrier name: " + carrier1.getName());
+        System.out.println("Freight Value: " + quote1.getFreightValue());
     }
 }
