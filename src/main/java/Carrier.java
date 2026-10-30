@@ -18,6 +18,16 @@ public class Carrier {
         this.costPerKm = costPerKm;
     }
 
+    @Override
+    public String toString() {
+        return "Carrier{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", baseFee=" + baseFee +
+                ", costPerKm=" + costPerKm +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }
